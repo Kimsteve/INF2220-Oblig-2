@@ -1,0 +1,25 @@
+
+The complexity of you implementation 
+
+Method read() has a for loop and while loop. The complexity  is O(N)
+
+
+The following have the complexity O(N) in general.
+-The loop in traverse() runs |V| times. 
+-The for loop in printproject() runs |V| times.  
+-The for loop in realizable() runs |V| times.  
+-The for loop in checkCycle() runs |VE| times. 
+-The do while loop and for loop in printCycle() run |V| +|V| times at worst case respectively.
+-The for loop in getdependanciesArray() run |V| times.  
+-The for loops in setDependancies() run |V| + |V|  times. 
+
+criticalTask() has one for loop running V times,  a while loop running V times at worst case and for loop inside it which runs E times. The complexity is O(|V| + VE)
+
+
+
+calTime() has 3 loops and a for loop with all under a while loop. 
+
+The outer while loop runs V times.
+The first inner while loop runs V times.
+Second and the third run a total of V times in the worst case of the outer while loop thus adding only a constant factor. The for loop inside the third while loop runs at most E times. The complexity is O(|V|^2 + VE)
+

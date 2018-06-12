@@ -1,0 +1,213 @@
+KIMOGOL$ javac Oblig2.java
+1x-193-157-203-253:stephesk KIMOGOL$ java Oblig2 buildhouse.txt 11
+Time: 0
+    Starting task: 5
+    Current Staff: 2
+Time: 4
+    Finished task: 5
+    Starting task: 1
+    Starting task: 6
+    Current Staff: 4
+Time: 6
+    Finished task: 6
+    Current Staff: 2
+Time: 8
+    Finished task: 1
+    Starting task: 2
+    Current Staff: 4
+Time: 14
+    Finished task: 2
+    Starting task: 3
+    Starting task: 4
+    Starting task: 7
+    Current Staff: 7
+Time: 15
+    Finished task: 3
+    Finished task: 4
+    Current Staff: 2
+Time: 18
+    Finished task: 7
+    Starting task: 8
+    Current Staff: 4
+Time: 22
+    Finished task: 8
+**** Project execution time is  22  ****
+
+Print task details
+id 	time staff L.startime   E.starttime  slack    dependancies         name
+1	 4	 2	 8	 8	 	 0	 [2, 3]	  	 Build-walls
+2	 6	 4	 14	 14	 	 0	 [3, 4, 7]	  	 Build-roofs
+3	 1	 2	 18	 15	 	 3	 [8]	  	 Put-on-wallpapers
+4	 1	 3	 15	 15	 	 0	 []	  	 Put-on-tiles
+5	 4	 2	 4	 4	 	 0	 [1, 6]	  	 Build-foundation
+6	 2	 2	 14	 6	 	 8	 [7]	  	 Make-floor
+7	 4	 2	 18	 18	 	 0	 [8]	  	 Put-carpet-floor
+8	 4	 4	 22	 22	 	 0	 []	  	 Move-in
+
+
+FILE BUILDHOUSE2
+
+KIMOGOL$ javac Oblig2.java
+1x-193-157-203-253:stephesk KIMOGOL$ java Oblig2 buildhouse2.txt 11
+ERROR: a cycle  is found
+printing all the nodes in the cyclic path
+Build-walls (1) -> Make-floor (6) -> Put-on-wallpapers (3) -> Build-roofs (2) -> Build-walls (1) ->
+
+FILE BUILDRAIL
+
+KIMOGOL$ javac Oblig2.java
+1x-193-157-203-253:stephesk KIMOGOL$ java Oblig2 buildrail.txt 11
+Time: 0
+    Starting task: 9
+    Current Staff: 10
+Time: 3
+    Finished task: 9
+    Starting task: 10
+    Starting task: 11
+    Starting task: 12
+    Starting task: 14
+    Starting task: 16
+    Starting task: 17
+    Current Staff: 56
+Time: 4
+    Finished task: 11
+    Starting task: 18
+    Starting task: 19
+    Starting task: 20
+    Current Staff: 64
+Time: 5
+    Finished task: 10
+    Starting task: 2
+    Current Staff: 70
+Time: 12
+    Finished task: 2
+    Current Staff: 60
+Time: 16
+    Finished task: 20
+    Starting task: 23
+    Current Staff: 61
+Time: 28
+    Finished task: 14
+    Starting task: 15
+    Current Staff: 61
+Time: 29
+    Finished task: 19
+    Current Staff: 57
+Time: 33
+    Finished task: 12
+    Starting task: 13
+    Current Staff: 57
+Time: 38
+    Finished task: 16
+    Current Staff: 45
+Time: 44
+    Finished task: 18
+    Starting task: 21
+    Current Staff: 46
+Time: 46
+    Finished task: 23
+    Starting task: 26
+    Current Staff: 48
+Time: 48
+    Finished task: 17
+    Finished task: 15
+    Starting task: 22
+    Current Staff: 29
+Time: 51
+    Finished task: 13
+    Starting task: 8
+    Current Staff: 24
+Time: 59
+    Finished task: 21
+    Starting task: 24
+    Current Staff: 26
+Time: 63
+    Finished task: 8
+    Starting task: 3
+    Current Staff: 29
+Time: 64
+    Finished task: 22
+    Finished task: 3
+    Starting task: 25
+    Current Staff: 21
+Time: 66
+    Finished task: 26
+    Current Staff: 14
+Time: 119
+    Finished task: 24
+    Starting task: 4
+    Current Staff: 13
+Time: 124
+    Finished task: 25
+    Starting task: 5
+    Starting task: 27
+    Current Staff: 22
+Time: 134
+    Finished task: 4
+    Current Staff: 16
+Time: 136
+    Finished task: 5
+    Current Staff: 10
+Time: 149
+    Finished task: 27
+    Starting task: 28
+    Starting task: 29
+    Current Staff: 20
+Time: 179
+    Finished task: 28
+    Current Staff: 10
+Time: 186
+    Finished task: 29
+    Starting task: 1
+    Starting task: 6
+    Starting task: 7
+    Starting task: 30
+    Current Staff: 29
+Time: 204
+    Finished task: 7
+    Current Staff: 23
+Time: 206
+    Finished task: 1
+    Finished task: 30
+    Starting task: 31
+    Current Staff: 13
+Time: 213
+    Finished task: 6
+    Current Staff: 7
+Time: 218
+    Finished task: 31
+**** Project execution time is  218  ****
+
+Print task details
+id 	time staff L.startime   E.starttime  slack    dependancies         name
+1	 20	 10	 206	 206	 	 0	 []	  	 Install-pavement
+2	 7	 10	 12	 12	 	 0	 []	  	 Install-railing
+3	 1	 10	 64	 64	 	 0	 []	  	 Install-ticketmachine
+4	 15	 6	 134	 134	 	 0	 []	  	 Paint-tower-1-with-arch
+5	 12	 6	 136	 136	 	 0	 []	  	 Paint-tower-2
+6	 27	 6	 213	 213	 	 0	 []	  	 Paint-trusses
+7	 18	 6	 204	 204	 	 0	 []	  	 Paint-cables-and-rods
+8	 12	 7	 206	 63	 	 143	 [3, 31]	  	 Put-lane-tunnel-and-intersection
+9	 3	 10	 3	 3	 	 0	 [10, 11, 12, 14, 16, 17]	  	 Setup-barrack
+10	 2	 4	 5	 5	 	 0	 [2]	  	 Prepare-storage
+11	 1	 4	 4	 4	 	 0	 [18, 19, 20]	  	 Rig-ramspace-reinforcing
+12	 30	 12	 33	 33	 	 0	 [13]	  	 Build-tunnel
+13	 18	 12	 51	 51	 	 0	 [8]	  	 Clean-tunnel
+14	 25	 12	 28	 28	 	 0	 [15]	  	 Build-intersection
+15	 20	 12	 48	 48	 	 0	 [8]	  	 Clean-intersection
+16	 35	 12	 38	 38	 	 0	 [21]	  	 Build-towerfoundation-1
+17	 45	 12	 48	 48	 	 0	 [22]	  	 Build-towerfoundation-2
+18	 40	 4	 44	 44	 	 0	 [21]	  	 Make-armouring-tower-1
+19	 25	 4	 48	 29	 	 19	 [22]	  	 Make-armouring-tower-2
+20	 12	 4	 16	 16	 	 0	 [23]	  	 Make-armouring-arch
+21	 15	 5	 59	 59	 	 0	 [24]	  	 Encase-and-armour-tower-1
+22	 16	 5	 64	 64	 	 0	 [25]	  	 Encase-and-armour-tower-2
+23	 30	 5	 46	 46	 	 0	 [26]	  	 Encase-and-armour-arch
+24	 60	 7	 124	 119	 	 5	 [4, 27]	  	 Cast-tower-1
+25	 60	 7	 124	 124	 	 0	 [5, 27]	  	 Cast-tower-2
+26	 20	 7	 206	 66	 	 140	 [31]	  	 Cast-arch
+27	 25	 10	 149	 149	 	 0	 [28, 29]	  	 Stretch-two-maincables
+28	 30	 10	 186	 179	 	 7	 [1, 6, 7, 30]	  	 Build-truss-1-with-rods
+29	 37	 10	 186	 186	 	 0	 [1, 6, 7, 30]	  	 Build-truss-2-with-rods
+30	 20	 7	 206	 206	 	 0	 [31]	  	 Cast-lane-on-truss
+31	 12	 7	 218	 218	 	 0	 []	  	 Polish-lane-on-arch
